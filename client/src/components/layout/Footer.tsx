@@ -1,4 +1,5 @@
 import { Facebook, Instagram, Mail, MapPin, Phone } from "lucide-react";
+import logoImg from "@assets/image_1765650186926.png";
 
 export function Footer() {
   return (
@@ -8,13 +9,11 @@ export function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <div className="bg-primary text-white p-2 rounded-sm font-bold text-xl tracking-tighter">
-                CS
-              </div>
-              <div className="flex flex-col leading-none">
-                <span className="font-heading font-bold text-lg uppercase tracking-wide">Cabinet</span>
-                <span className="font-heading font-light text-sm uppercase tracking-widest">Source</span>
-              </div>
+              <img 
+                src={logoImg} 
+                alt="Cabinet Source" 
+                className="h-12 w-auto object-contain" 
+              />
             </div>
             <p className="text-gray-400 text-sm leading-relaxed">
               Manufacturing, selling, and installing high-quality cabinetry for over 25 years. 

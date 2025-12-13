@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { Menu, X, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import logoImg from "@assets/image_1765650186926.png";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -30,7 +31,7 @@ export function Navbar() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         isScrolled
-          ? "bg-white/90 backdrop-blur-md shadow-sm py-4"
+          ? "bg-slate-900/95 backdrop-blur-md shadow-sm py-2"
           : "bg-transparent py-6"
       )}
     >
@@ -38,13 +39,11 @@ export function Navbar() {
         {/* Logo */}
         <Link href="/">
           <a className="flex items-center gap-2 group">
-            <div className="bg-primary text-white p-2 rounded-sm font-bold text-xl tracking-tighter group-hover:bg-primary/90 transition-colors">
-              CS
-            </div>
-            <div className={cn("flex flex-col leading-none", isScrolled ? "text-foreground" : "text-white")}>
-              <span className="font-heading font-bold text-lg uppercase tracking-wide">Cabinet</span>
-              <span className="font-heading font-light text-sm uppercase tracking-widest">Source</span>
-            </div>
+            <img 
+              src={logoImg} 
+              alt="Cabinet Source" 
+              className="h-12 w-auto object-contain" 
+            />
           </a>
         </Link>
 
@@ -56,7 +55,7 @@ export function Navbar() {
               href={link.href}
               className={cn(
                 "text-sm font-medium uppercase tracking-wide hover:text-primary transition-colors",
-                isScrolled ? "text-gray-700" : "text-white/90 hover:text-white"
+                "text-white/90 hover:text-white"
               )}
             >
               {link.name}
@@ -71,7 +70,7 @@ export function Navbar() {
           </Button>
           
           <button
-            className={cn("md:hidden", isScrolled ? "text-foreground" : "text-white")}
+            className="text-white md:hidden"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X /> : <Menu />}
@@ -81,13 +80,13 @@ export function Navbar() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="absolute top-full left-0 right-0 bg-white border-t border-gray-100 p-4 md:hidden shadow-xl animate-in slide-in-from-top-5">
+        <div className="absolute top-full left-0 right-0 bg-slate-900 border-t border-slate-800 p-4 md:hidden shadow-xl animate-in slide-in-from-top-5">
           <div className="flex flex-col gap-4">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="text-lg font-medium text-gray-800 py-2 border-b border-gray-50 hover:text-primary"
+                className="text-lg font-medium text-white/90 py-2 border-b border-slate-800 hover:text-primary"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {link.name}
