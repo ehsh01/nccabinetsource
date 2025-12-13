@@ -47,7 +47,14 @@ export function Footer() {
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary shrink-0" />
-                <span>Serving North Carolina<br/>Hickory, Newton, Mars Hill & surrounding areas</span>
+                <a 
+                  href="https://www.google.com/maps/search/?api=1&query=1818+U.S.+Hwy+70+SW,+Hickory,+NC+28602" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors"
+                >
+                  1818 U.S. Hwy 70 SW,<br/>Hickory, NC 28602
+                </a>
               </li>
             </ul>
           </div>

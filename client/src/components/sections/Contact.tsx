@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { MapPin, Phone } from "lucide-react";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -40,9 +41,30 @@ export function Contact() {
       <div className="container mx-auto px-4 max-w-4xl">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-5xl font-heading font-bold mb-6">Ready to Start Your Project?</h2>
-          <p className="text-gray-400 text-lg">
+          <p className="text-gray-400 text-lg mb-8">
             Get a free layout and consultation today. Fill out the form below and we'll reach out.
           </p>
+
+          <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-12 text-gray-300">
+             <a 
+               href="https://www.google.com/maps/search/?api=1&query=1818+U.S.+Hwy+70+SW,+Hickory,+NC+28602" 
+               target="_blank" 
+               rel="noopener noreferrer"
+               className="flex items-center gap-2 hover:text-primary transition-colors group"
+             >
+               <div className="bg-white/10 p-2 rounded-full group-hover:bg-primary transition-colors">
+                 <MapPin className="w-5 h-5 text-primary group-hover:text-white transition-colors" />
+               </div>
+               <span className="text-left">1818 U.S. Hwy 70 SW,<br className="md:hidden"/> Hickory, NC 28602</span>
+             </a>
+             
+             <a href="tel:8281234567" className="flex items-center gap-2 hover:text-primary transition-colors group">
+               <div className="bg-white/10 p-2 rounded-full group-hover:bg-primary transition-colors">
+                 <Phone className="w-5 h-5 text-primary group-hover:text-white transition-colors" />
+               </div>
+               <span>(828) 123-4567</span>
+             </a>
+          </div>
         </div>
 
         <div className="bg-white text-gray-900 p-8 md:p-12 rounded-2xl shadow-2xl">
