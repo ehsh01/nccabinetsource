@@ -56,7 +56,7 @@ export function Footer() {
           <div>
             <h4 className="font-heading font-bold text-lg mb-6 text-primary">Stay Connected</h4>
             <div className="flex gap-4 mb-6">
-              <a href="#" className="bg-white/10 p-2 rounded-full hover:bg-primary transition-colors">
+              <a href="https://www.facebook.com/daymiandpaulo" target="_blank" rel="noopener noreferrer" className="bg-white/10 p-2 rounded-full hover:bg-primary transition-colors">
                 <Facebook className="w-5 h-5" />
               </a>
               <a href="https://www.instagram.com/cabinet_source_nc/" target="_blank" rel="noopener noreferrer" className="bg-white/10 p-2 rounded-full hover:bg-primary transition-colors">
