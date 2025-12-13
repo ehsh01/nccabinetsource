@@ -59,7 +59,7 @@ export function Footer() {
               <a href="#" className="bg-white/10 p-2 rounded-full hover:bg-primary transition-colors">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" className="bg-white/10 p-2 rounded-full hover:bg-primary transition-colors">
+              <a href="https://www.instagram.com/cabinet_source_nc/" target="_blank" rel="noopener noreferrer" className="bg-white/10 p-2 rounded-full hover:bg-primary transition-colors">
                 <Instagram className="w-5 h-5" />
               </a>
             </div>
