@@ -1,0 +1,91 @@
+{
+  "colorScheme": "light",
+  "fonts": [
+    {
+      "family": "Raleway",
+      "role": "heading"
+    },
+    {
+      "family": "Poppins",
+      "role": "body"
+    },
+    {
+      "family": "Arial",
+      "role": "body"
+    },
+    {
+      "family": "Times New Roman",
+      "role": "body"
+    },
+    {
+      "family": "Gotham SSm A",
+      "role": "display"
+    }
+  ],
+  "colors": {
+    "primary": "#0000EE",
+    "accent": "#FF3377",
+    "background": "#FFFFFF",
+    "textPrimary": "#000000",
+    "link": "#FF3377"
+  },
+  "typography": {
+    "fontFamilies": {
+      "primary": "Poppins",
+      "heading": "Raleway"
+    },
+    "fontStacks": {
+      "heading": [
+        "Raleway",
+        "sans-serif"
+      ],
+      "body": [
+        "Times New Roman"
+      ],
+      "paragraph": [
+        "Raleway",
+        "sans-serif"
+      ]
+    },
+    "fontSizes": {
+      "h1": "1px",
+      "h2": "1px",
+      "body": "12px"
+    }
+  },
+  "spacing": {
+    "baseUnit": 4,
+    "borderRadius": "3px"
+  },
+  "components": {
+    "input": {
+      "borderColor": "#CCCCCC",
+      "borderRadius": "3px"
+    }
+  },
+  "images": {
+    "logo": "https://www.nccabinetsource.com/__static/f079267215cd486587b6c816c20288cc/web-logo(12).gif",
+    "favicon": "https://www.nccabinetsource.com/favicons/bc3bc0a4-c86e-43ad-bf92-726368172c2e/favicon-16x16.png",
+    "ogImage": null
+  },
+  "__framework_hints": [],
+  "__llm_logo_reasoning": {
+    "selectedIndex": 0,
+    "reasoning": "The logo at index 0 is the only one that visually represents the brand name 'For Your Bathrooms....' and is located in the header, linking to the homepage, making it the main brand logo.",
+    "confidence": 0.95
+  },
+  "personality": {
+    "tone": "modern",
+    "energy": "medium",
+    "targetAudience": "homeowners and contractors looking for bathroom solutions"
+  },
+  "designSystem": {
+    "framework": "unknown",
+    "componentLibrary": null
+  },
+  "confidence": {
+    "buttons": 0.9,
+    "colors": 0.95,
+    "overall": 0.925
+  }
+}
