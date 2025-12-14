@@ -25,12 +25,54 @@ export function Footer() {
           <div>
             <h4 className="font-heading font-bold text-lg mb-6 text-primary">Explore</h4>
             <ul className="space-y-3 text-gray-400">
-              <li><a href="#kitchens" className="hover:text-white transition-colors">Kitchen Cabinets</a></li>
-              <li><a href="#bathrooms" className="hover:text-white transition-colors">Bathroom Vanities</a></li>
-              <li><a href="#outdoors" className="hover:text-white transition-colors">Outdoor Kitchens</a></li>
-              <li><a href="#gallery" className="hover:text-white transition-colors">Gallery</a></li>
-              <li><a href="#about" className="hover:text-white transition-colors">About Us</a></li>
-              <li><a href="#testimonials" className="hover:text-white transition-colors">Reviews</a></li>
+              <li>
+                <button 
+                  onClick={() => document.querySelector("#kitchens")?.scrollIntoView({ behavior: 'smooth' })}
+                  className="hover:text-white transition-colors bg-transparent border-none p-0 cursor-pointer"
+                >
+                  Kitchen Cabinets
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => document.querySelector("#bathrooms")?.scrollIntoView({ behavior: 'smooth' })}
+                  className="hover:text-white transition-colors bg-transparent border-none p-0 cursor-pointer"
+                >
+                  Bathroom Vanities
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => document.querySelector("#outdoors")?.scrollIntoView({ behavior: 'smooth' })}
+                  className="hover:text-white transition-colors bg-transparent border-none p-0 cursor-pointer"
+                >
+                  Outdoor Kitchens
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => document.querySelector("#gallery")?.scrollIntoView({ behavior: 'smooth' })}
+                  className="hover:text-white transition-colors bg-transparent border-none p-0 cursor-pointer"
+                >
+                  Gallery
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => document.querySelector("#about")?.scrollIntoView({ behavior: 'smooth' })}
+                  className="hover:text-white transition-colors bg-transparent border-none p-0 cursor-pointer"
+                >
+                  About Us
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => document.querySelector("#testimonials")?.scrollIntoView({ behavior: 'smooth' })}
+                  className="hover:text-white transition-colors bg-transparent border-none p-0 cursor-pointer"
+                >
+                  Reviews
+                </button>
+              </li>
             </ul>
           </div>
 
