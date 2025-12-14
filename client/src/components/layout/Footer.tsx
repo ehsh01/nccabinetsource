@@ -44,7 +44,7 @@ export function Footer() {
               </li>
               <li className="flex items-start gap-3">
                 <Mail className="w-5 h-5 text-primary shrink-0" />
-                <span>paul@nccabinetsource.com</span>
+                <a href="mailto:paul@nccabinetsource.com" className="hover:text-white transition-colors">paul@nccabinetsource.com</a>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary shrink-0" />
