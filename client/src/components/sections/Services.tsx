@@ -65,7 +65,15 @@ function ServiceSection({ id, title, subtitle, description, features, image, rev
                 ))}
               </ul>
 
-              <Button className="group bg-slate-900 text-white hover:bg-slate-800 rounded-full px-8 py-6">
+              <Button 
+                className="group bg-slate-900 text-white hover:bg-slate-800 rounded-full px-8 py-6"
+                onClick={() => {
+                  const element = document.querySelector("#contact");
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+              >
                 Explore Options
                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Button>

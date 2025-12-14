@@ -33,16 +33,31 @@ export function Hero() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#contact">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-full px-8 py-6 text-lg w-full sm:w-auto">
-                Get Started
-              </Button>
-            </a>
-            <a href="#gallery">
-              <Button size="lg" variant="outline" className="bg-white/10 border-white/30 text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg backdrop-blur-sm w-full sm:w-auto">
-                View Gallery
-              </Button>
-            </a>
+            <Button 
+              size="lg" 
+              className="bg-primary hover:bg-primary/90 text-white rounded-full px-8 py-6 text-lg w-full sm:w-auto"
+              onClick={() => {
+                const element = document.querySelector("#contact");
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+            >
+              Get Started
+            </Button>
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="bg-white/10 border-white/30 text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg backdrop-blur-sm w-full sm:w-auto"
+              onClick={() => {
+                const element = document.querySelector("#gallery");
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+            >
+              View Gallery
+            </Button>
           </div>
         </motion.div>
       </div>
