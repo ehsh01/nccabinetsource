@@ -58,11 +58,11 @@ export function Contact() {
                <span className="text-left">1818 U.S. Hwy 70 SW,<br className="md:hidden"/> Hickory, NC 28602</span>
              </a>
              
-             <a href="tel:8281234567" className="flex items-center gap-2 hover:text-primary transition-colors group">
+             <a href="tel:8284141058" className="flex items-center gap-2 hover:text-primary transition-colors group">
                <div className="bg-white/10 p-2 rounded-full group-hover:bg-primary transition-colors">
                  <Phone className="w-5 h-5 text-primary group-hover:text-white transition-colors" />
                </div>
-               <span>(828) 123-4567</span>
+               <span>(828) 414-1058</span>
              </a>
           </div>
         </div>
@@ -105,7 +105,7 @@ export function Contact() {
                   <FormItem>
                     <FormLabel>Phone</FormLabel>
                     <FormControl>
-                      <Input placeholder="(555) 123-4567" {...field} className="bg-gray-50 border-gray-200" />
+                      <Input placeholder="(828) 414-1058" {...field} className="bg-gray-50 border-gray-200" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
