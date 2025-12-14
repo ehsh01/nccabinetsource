@@ -38,14 +38,12 @@ export function Navbar() {
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/">
-          <a className="flex items-center gap-2 group">
-            <img 
-              src={logoImg} 
-              alt="Cabinet Source" 
-              className="h-12 w-auto object-contain" 
-            />
-          </a>
+        <Link href="/" className="flex items-center gap-2 group">
+          <img 
+            src={logoImg} 
+            alt="Cabinet Source" 
+            className="h-12 w-auto object-contain" 
+          />
         </Link>
 
         {/* Desktop Nav */}
