@@ -28,6 +28,7 @@ export function Footer() {
               <li><a href="#kitchens" className="hover:text-white transition-colors">Kitchen Cabinets</a></li>
               <li><a href="#bathrooms" className="hover:text-white transition-colors">Bathroom Vanities</a></li>
               <li><a href="#outdoors" className="hover:text-white transition-colors">Outdoor Kitchens</a></li>
+              <li><a href="#gallery" className="hover:text-white transition-colors">Gallery</a></li>
               <li><a href="#about" className="hover:text-white transition-colors">About Us</a></li>
               <li><a href="#testimonials" className="hover:text-white transition-colors">Reviews</a></li>
             </ul>
