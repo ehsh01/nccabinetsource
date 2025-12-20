@@ -1,4 +1,5 @@
 import { Crown, Heart, Lightbulb, Ruler, Users, Zap } from "lucide-react";
+import foundersImg from "@assets/Daymi_and_Paulo_1766215667758.png";
 
 const features = [
   {
@@ -37,6 +38,41 @@ export function About() {
   return (
     <section id="about" className="py-24 bg-slate-50">
       <div className="container mx-auto px-4">
+        {/* Our Story Section */}
+        <div className="flex flex-col lg:flex-row items-center gap-12 mb-24">
+          <div className="w-full lg:w-1/2">
+            <div className="relative rounded-2xl overflow-hidden shadow-xl">
+              <img 
+                src={foundersImg} 
+                alt="Daymi and Paulo - Founders of NC Cabinet Source" 
+                className="w-full h-auto object-cover"
+              />
+            </div>
+          </div>
+          <div className="w-full lg:w-1/2 space-y-6">
+            <span className="text-primary font-bold tracking-wider uppercase text-sm block">About Us</span>
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-gray-900">Our Story</h2>
+            <div className="space-y-4 text-gray-600 leading-relaxed">
+              <p>
+                What began more than 25 years ago in South Florida was built on a simple belief: quality craftsmanship, honesty, and pride in every project matter. From day one, our company focused on delivering beautifully crafted cabinets tailored to each client’s vision, never cutting corners, never compromising on materials, and always treating every home as if it were our own.
+              </p>
+              <p>
+                Over the years, that commitment earned us the trust of homeowners, builders, and designers throughout South Florida. Project after project, our reputation grew, not through advertising, but through word of mouth, long-lasting relationships, and kitchens that stood the test of time.
+              </p>
+              <p>
+                Cabinet making has always been more than a business for us; it’s a passion. It’s the careful selection of materials, the precision in every cut, and the satisfaction of seeing a space transformed into something both functional and beautiful. That passion is what carried us forward for decades, and it’s what inspired our next chapter.
+              </p>
+              <p>
+                Today, we’re proud to bring that same dedication, experience, and craftsmanship to our new Cabinet Source location in Hickory, North Carolina. While our footprint has expanded, our values remain exactly the same. Every cabinet is still designed with care, built with purpose, and finished with pride.
+              </p>
+              <p className="font-medium text-gray-900 border-l-4 border-primary pl-4 italic">
+                "To our new customers in North Carolina: we’re honored to serve you and excited to bring over 25 years of proven craftsmanship, passion, and personal service to your homes. Welcome to Cabinet Source, where experience meets excellence, and every detail matters."
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Features Grid */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-gray-900 mb-4">Why Choose Us?</h2>
           <p className="text-gray-600 text-lg">
