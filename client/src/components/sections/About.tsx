@@ -1,5 +1,5 @@
 import { Crown, Heart, Lightbulb, Ruler, Users, Zap } from "lucide-react";
-import foundersImg from "@assets/Daymi_and_Paulo_1766215667758.png";
+import foundersImg from "@assets/Generated_Image_December_21,_2025_-_7_09PM_1766375055633.jpg";
 
 const features = [
   {
