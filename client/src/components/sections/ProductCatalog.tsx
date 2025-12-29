@@ -9,7 +9,7 @@ import midnightKitchen from "@assets/generated_images/full_kitchen_with_brooklyn
 import slateKitchen from "@assets/generated_images/full_kitchen_with_brooklyn_slate_cabinets.png";
 import fawnKitchen from "@assets/generated_images/full_kitchen_with_brooklyn_fawn_cabinets.png";
 
-import classicDesignerWhite from "@assets/generated_images/full_kitchen_classic_shaker_designer_white_5-piece_drawers.png";
+import classicDesignerWhite from "@assets/Shaker_designer_white_1767048245858.png";
 import classicSand from "@assets/generated_images/full_kitchen_classic_shaker_sand_5-piece_drawers.png";
 import classicEspresso from "@assets/generated_images/full_kitchen_classic_shaker_espresso_5-piece_drawers.png";
 import classicKodiak from "@assets/generated_images/full_kitchen_classic_shaker_kodiak_5-piece_drawers.png";
