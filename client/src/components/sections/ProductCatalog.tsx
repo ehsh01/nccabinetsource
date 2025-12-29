@@ -4,8 +4,10 @@ import { Check, Info } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 import whiteCabinet from "@assets/generated_images/white_shaker_style_kitchen_cabinets.png";
-import grayCabinet from "@assets/generated_images/gray_shaker_style_kitchen_cabinets.png";
-import blueCabinet from "@assets/generated_images/navy_blue_shaker_style_kitchen_cabinets.png";
+import modernGrayCabinet from "@assets/generated_images/modern_gray_shaker_style_kitchen_cabinets.png";
+import midnightCabinet from "@assets/generated_images/navy_blue_shaker_style_kitchen_cabinets.png"; // Reusing navy for Midnight
+import slateCabinet from "@assets/generated_images/slate_shaker_style_kitchen_cabinets.png";
+import fawnCabinet from "@assets/generated_images/fawn_shaker_style_kitchen_cabinets.png";
 import espressoCabinet from "@assets/generated_images/espresso_shaker_style_kitchen_cabinets.png";
 
 // Mock Data Structure matching the reference site experience
@@ -22,9 +24,10 @@ const cabinetSeries = [
     ],
     colors: [
       { id: "bright-white", name: "Bright White", hex: "#F5F5F5", image: whiteCabinet },
-      { id: "slate-gray", name: "Slate Gray", hex: "#708090", image: grayCabinet },
-      { id: "navy-blue", name: "Navy Blue", hex: "#1F2937", image: blueCabinet },
-      { id: "espresso", name: "Espresso", hex: "#3E2723", image: espressoCabinet },
+      { id: "modern-gray", name: "Modern Gray", hex: "#E5E7EB", image: modernGrayCabinet },
+      { id: "midnight", name: "Midnight", hex: "#1F2937", image: midnightCabinet },
+      { id: "slate", name: "Slate", hex: "#545963", image: slateCabinet },
+      { id: "fawn", name: "Fawn", hex: "#D4B996", image: fawnCabinet },
     ]
   },
   {
