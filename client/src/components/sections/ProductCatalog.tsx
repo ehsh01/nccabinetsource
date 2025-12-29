@@ -3,14 +3,18 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Check, Info } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-import whiteCabinet from "@assets/generated_images/white_shaker_style_kitchen_cabinets.png";
-import espressoCabinet from "@assets/generated_images/espresso_shaker_style_kitchen_cabinets.png";
-
 import whiteKitchen from "@assets/generated_images/full_kitchen_with_brooklyn_bright_white_cabinets.png";
 import modernGrayKitchen from "@assets/generated_images/full_kitchen_with_brooklyn_modern_gray_cabinets.png";
 import midnightKitchen from "@assets/generated_images/full_kitchen_with_brooklyn_midnight_cabinets.png";
 import slateKitchen from "@assets/generated_images/full_kitchen_with_brooklyn_slate_cabinets.png";
 import fawnKitchen from "@assets/generated_images/full_kitchen_with_brooklyn_fawn_cabinets.png";
+
+import classicDesignerWhite from "@assets/generated_images/full_kitchen_with_classic_shaker_designer_white_cabinets.png";
+import classicSand from "@assets/generated_images/full_kitchen_with_classic_shaker_sand_cabinets.png";
+import classicEspresso from "@assets/generated_images/full_kitchen_with_classic_shaker_espresso_cabinets.png";
+import classicKodiak from "@assets/generated_images/full_kitchen_with_classic_shaker_kodiak_cabinets.png";
+import classicMoss from "@assets/generated_images/full_kitchen_with_classic_shaker_moss_cabinets.png";
+import classicShakerWhite from "@assets/generated_images/full_kitchen_with_classic_shaker_shaker_white_cabinets.png";
 
 // Mock Data Structure matching the reference site experience
 const cabinetSeries = [
@@ -42,10 +46,13 @@ const cabinetSeries = [
       "Particle Board Box",
       "Veneer Center Panel"
     ],
-    // Reusing images for demo purposes since we only generated one set
     colors: [
-      { id: "bright-white", name: "Bright White", hex: "#F5F5F5", image: whiteCabinet },
-      { id: "espresso", name: "Espresso", hex: "#3E2723", image: espressoCabinet },
+      { id: "designer-white", name: "Designer White", hex: "#FAFAFA", image: classicDesignerWhite },
+      { id: "shaker-white", name: "Shaker White", hex: "#F3F4F6", image: classicShakerWhite },
+      { id: "sand", name: "Sand", hex: "#E5DCC5", image: classicSand },
+      { id: "kodiak", name: "Kodiak", hex: "#8B5E3C", image: classicKodiak },
+      { id: "espresso", name: "Espresso", hex: "#3E2723", image: classicEspresso },
+      { id: "moss", name: "Moss", hex: "#8da399", image: classicMoss },
     ]
   }
 ];
