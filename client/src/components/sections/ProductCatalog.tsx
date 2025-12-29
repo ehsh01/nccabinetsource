@@ -14,7 +14,7 @@ import classicSand from "@assets/generated_images/full_kitchen_classic_shaker_sa
 import classicEspresso from "@assets/generated_images/full_kitchen_classic_shaker_espresso_5-piece_drawers.png";
 import classicKodiak from "@assets/generated_images/full_kitchen_classic_shaker_kodiak_5-piece_drawers.png";
 import classicMoss from "@assets/generated_images/full_kitchen_classic_shaker_moss_5-piece_drawers.png";
-import classicShakerWhite from "@assets/generated_images/full_kitchen_classic_shaker_shaker_white_5-piece_drawers.png";
+import classicShakerWhite from "@assets/Designer_White,_Slab_1767048428297.png";
 
 // Mock Data Structure matching the reference site experience
 const cabinetSeries = [
