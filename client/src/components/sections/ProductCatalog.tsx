@@ -4,11 +4,13 @@ import { Check, Info } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 import whiteCabinet from "@assets/generated_images/white_shaker_style_kitchen_cabinets.png";
-import modernGrayCabinet from "@assets/generated_images/modern_gray_shaker_style_kitchen_cabinets.png";
-import midnightCabinet from "@assets/generated_images/navy_blue_shaker_style_kitchen_cabinets.png"; // Reusing navy for Midnight
-import slateCabinet from "@assets/generated_images/slate_shaker_style_kitchen_cabinets.png";
-import fawnCabinet from "@assets/generated_images/fawn_shaker_style_kitchen_cabinets.png";
 import espressoCabinet from "@assets/generated_images/espresso_shaker_style_kitchen_cabinets.png";
+
+import whiteKitchen from "@assets/generated_images/full_kitchen_with_brooklyn_bright_white_cabinets.png";
+import modernGrayKitchen from "@assets/generated_images/full_kitchen_with_brooklyn_modern_gray_cabinets.png";
+import midnightKitchen from "@assets/generated_images/full_kitchen_with_brooklyn_midnight_cabinets.png";
+import slateKitchen from "@assets/generated_images/full_kitchen_with_brooklyn_slate_cabinets.png";
+import fawnKitchen from "@assets/generated_images/full_kitchen_with_brooklyn_fawn_cabinets.png";
 
 // Mock Data Structure matching the reference site experience
 const cabinetSeries = [
@@ -23,11 +25,11 @@ const cabinetSeries = [
       "Five-Piece Drawer Fronts"
     ],
     colors: [
-      { id: "bright-white", name: "Bright White", hex: "#F5F5F5", image: whiteCabinet },
-      { id: "modern-gray", name: "Modern Gray", hex: "#E5E7EB", image: modernGrayCabinet },
-      { id: "midnight", name: "Midnight", hex: "#1F2937", image: midnightCabinet },
-      { id: "slate", name: "Slate", hex: "#545963", image: slateCabinet },
-      { id: "fawn", name: "Fawn", hex: "#D4B996", image: fawnCabinet },
+      { id: "bright-white", name: "Bright White", hex: "#F5F5F5", image: whiteKitchen },
+      { id: "modern-gray", name: "Modern Gray", hex: "#E5E7EB", image: modernGrayKitchen },
+      { id: "midnight", name: "Midnight", hex: "#1F2937", image: midnightKitchen },
+      { id: "slate", name: "Slate", hex: "#545963", image: slateKitchen },
+      { id: "fawn", name: "Fawn", hex: "#D4B996", image: fawnKitchen },
     ]
   },
   {
