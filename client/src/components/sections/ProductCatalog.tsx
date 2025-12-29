@@ -9,12 +9,12 @@ import midnightKitchen from "@assets/generated_images/full_kitchen_with_brooklyn
 import slateKitchen from "@assets/generated_images/full_kitchen_with_brooklyn_slate_cabinets.png";
 import fawnKitchen from "@assets/generated_images/full_kitchen_with_brooklyn_fawn_cabinets.png";
 
-import classicDesignerWhite from "@assets/generated_images/full_kitchen_with_classic_shaker_designer_white_cabinets.png";
-import classicSand from "@assets/generated_images/full_kitchen_with_classic_shaker_sand_cabinets.png";
-import classicEspresso from "@assets/generated_images/full_kitchen_with_classic_shaker_espresso_cabinets.png";
-import classicKodiak from "@assets/generated_images/full_kitchen_with_classic_shaker_kodiak_cabinets.png";
-import classicMoss from "@assets/generated_images/full_kitchen_with_classic_shaker_moss_cabinets.png";
-import classicShakerWhite from "@assets/generated_images/full_kitchen_with_classic_shaker_shaker_white_cabinets.png";
+import classicDesignerWhite from "@assets/generated_images/full_kitchen_classic_shaker_designer_white_5-piece_drawers.png";
+import classicSand from "@assets/generated_images/full_kitchen_classic_shaker_sand_5-piece_drawers.png";
+import classicEspresso from "@assets/generated_images/full_kitchen_classic_shaker_espresso_5-piece_drawers.png";
+import classicKodiak from "@assets/generated_images/full_kitchen_classic_shaker_kodiak_5-piece_drawers.png";
+import classicMoss from "@assets/generated_images/full_kitchen_classic_shaker_moss_5-piece_drawers.png";
+import classicShakerWhite from "@assets/generated_images/full_kitchen_classic_shaker_shaker_white_5-piece_drawers.png";
 
 // Mock Data Structure matching the reference site experience
 const cabinetSeries = [
