@@ -48,7 +48,7 @@ const cabinetSeries = [
     ],
     colors: [
       { id: "designer-white", name: "Designer White", hex: "#FAFAFA", image: classicDesignerWhite },
-      { id: "shaker-white", name: "Shaker White", hex: "#F3F4F6", image: classicShakerWhite },
+      { id: "shaker-white", name: "Designer White, Slab", hex: "#F3F4F6", image: classicShakerWhite },
       { id: "sand", name: "Sand", hex: "#E5DCC5", image: classicSand },
       { id: "kodiak", name: "Kodiak", hex: "#8B5E3C", image: classicKodiak },
       { id: "espresso", name: "Espresso", hex: "#3E2723", image: classicEspresso },
