@@ -51,6 +51,14 @@ export function Footer() {
               </li>
               <li>
                 <button 
+                  onClick={() => document.querySelector("#collections")?.scrollIntoView({ behavior: 'smooth' })}
+                  className="hover:text-white transition-colors bg-transparent border-none p-0 cursor-pointer"
+                >
+                  Collections
+                </button>
+              </li>
+              <li>
+                <button 
                   onClick={() => document.querySelector("#gallery")?.scrollIntoView({ behavior: 'smooth' })}
                   className="hover:text-white transition-colors bg-transparent border-none p-0 cursor-pointer"
                 >
