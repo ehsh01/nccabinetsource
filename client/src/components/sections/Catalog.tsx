@@ -69,7 +69,7 @@ const collections: Collection[] = [
     finishes: [
       { id: "designer-white", name: "Designer White", color: "#F5F5F5", imagePaths: ["shaker/designer-white-1.jpg", "shaker/designer-white-2.jpg", "shaker/designer-white-3.jpg", "shaker/designer-white-4.jpg", "shaker/designer-white-5.jpg"] },
       { id: "designer-white-slab", name: "Designer White, Slab", color: "#FAFAFA", imagePaths: ["shaker/designer-white-slab-1.jpg", "shaker/designer-white-slab-2.jpg"] },
-      { id: "sand", name: "Sand", color: "#C4B896", imagePaths: ["shaker/sand.jpg"] },
+      { id: "sand", name: "Sand", color: "#C4B896", imagePaths: ["shaker/sand-1.jpg", "shaker/sand-2.jpg", "shaker/sand-3.jpg"] },
       { id: "espresso", name: "Espresso", color: "#3d2817", imagePaths: ["shaker/espresso.jpg"] },
       { id: "kodiak", name: "Kodiak", color: "#5c4033", imagePaths: ["shaker/kodiak.jpg"] },
       { id: "moss", name: "Moss", color: "#5a6b4a", imagePaths: ["shaker/moss.jpg"] },
