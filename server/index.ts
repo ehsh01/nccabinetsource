@@ -80,8 +80,8 @@ app.use((req, res, next) => {
     await setupVite(httpServer, app);
   }
 
-  // Serve on PORT (default 3000 for dev to avoid macOS AirPlay on 5000)
-  const port = parseInt(process.env.PORT || "3000", 10);
+  // Serve on PORT (default 3001 for dev to avoid conflicts with other apps on 3000)
+  const port = parseInt(process.env.PORT || "3001", 10);
   const host = process.env.HOST || (process.env.NODE_ENV === "production" ? "0.0.0.0" : "127.0.0.1");
   httpServer.listen(
     {
