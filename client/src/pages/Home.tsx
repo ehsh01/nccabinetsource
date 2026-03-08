@@ -3,10 +3,11 @@ import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/sections/Hero";
 import { Services } from "@/components/sections/Services";
 import { About } from "@/components/sections/About";
+import { Catalog } from "@/components/sections/Catalog";
 import { Gallery } from "@/components/sections/Gallery";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { Contact } from "@/components/sections/Contact";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
         <Navbar />
         <Hero />
         <Services />
+        <Catalog />
         <Gallery />
         <About />
         <Testimonials />
