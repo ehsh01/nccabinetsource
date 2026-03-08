@@ -68,7 +68,7 @@ const collections: Collection[] = [
     ],
     finishes: [
       { id: "designer-white", name: "Designer White", color: "#F5F5F5", imagePaths: ["shaker/designer-white-1.jpg", "shaker/designer-white-2.jpg", "shaker/designer-white-3.jpg", "shaker/designer-white-4.jpg", "shaker/designer-white-5.jpg"] },
-      { id: "designer-white-slab", name: "Designer White, Slab", color: "#FAFAFA", imagePaths: ["shaker/designer-white-slab-1.jpg", "shaker/designer-white-slab-2.jpeg"] },
+      { id: "designer-white-slab", name: "Designer White, Slab", color: "#FAFAFA", imagePaths: ["shaker/designer-white-slab-1.jpg", "shaker/designer-white-slab-2.jpg"] },
       { id: "sand", name: "Sand", color: "#C4B896", imagePaths: ["shaker/sand.jpg"] },
       { id: "espresso", name: "Espresso", color: "#3d2817", imagePaths: ["shaker/espresso.jpg"] },
       { id: "kodiak", name: "Kodiak", color: "#5c4033", imagePaths: ["shaker/kodiak.jpg"] },
@@ -112,24 +112,26 @@ function getImageSrc(path: string): string {
 export function Catalog() {
   const [selectedCollection, setSelectedCollection] = useState<Collection>(collections[0]);
   const [selectedFinish, setSelectedFinish] = useState<Finish>(collections[0].finishes[0]);
-  const [imageError, setImageError] = useState(false);
+  const [failedImageIndices, setFailedImageIndices] = useState<Set<number>>(new Set());
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
 
   const images = selectedFinish.imagePaths.map((p) => getImageSrc(p));
-  const displayImages = imageError ? [placeholderKitchen] : images;
+  const displayImages = images.map((src, i) =>
+    failedImageIndices.has(i) ? placeholderKitchen : src
+  );
 
   const handleCollectionSelect = (collection: Collection) => {
     const matchingFinish = collection.finishes.find((f) => f.id === selectedFinish.id);
     setSelectedCollection(collection);
     setSelectedFinish(matchingFinish ?? collection.finishes[0]);
-    setImageError(false);
+    setFailedImageIndices(new Set());
     setLightboxOpen(false);
   };
 
   const handleFinishSelect = (finish: Finish) => {
     setSelectedFinish(finish);
-    setImageError(false);
+    setFailedImageIndices(new Set());
     setLightboxOpen(false);
   };
 
@@ -283,7 +285,7 @@ export function Catalog() {
                       src={displayImages[0]}
                       alt={`${selectedCollection.name} in ${selectedFinish.name}`}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                      onError={() => setImageError(true)}
+                      onError={() => setFailedImageIndices((prev) => new Set(prev).add(0))}
                     />
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
                   </motion.button>
@@ -303,7 +305,7 @@ export function Catalog() {
                         src={displayImages[0]}
                         alt={`${selectedCollection.name} ${selectedFinish.name} - View 1`}
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                        onError={() => setImageError(true)}
+                        onError={() => setFailedImageIndices((prev) => new Set(prev).add(0))}
                       />
                       <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
                     </motion.button>
@@ -323,7 +325,7 @@ export function Catalog() {
                             src={src}
                             alt={`${selectedCollection.name} ${selectedFinish.name} - View ${idx + 2}`}
                             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                            onError={() => setImageError(true)}
+                            onError={() => setFailedImageIndices((prev) => new Set(prev).add(idx + 1))}
                           />
                           <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
                         </motion.button>
@@ -339,7 +341,7 @@ export function Catalog() {
                     {selectedCollection.name} — {selectedFinish.name}
                   </p>
                 </div>
-                {imageError && (
+                {failedImageIndices.size > 0 && (
                   <div className="bg-amber-100 text-amber-800 text-xs px-3 py-2 rounded-lg">
                     Add images to catalog/
                   </div>

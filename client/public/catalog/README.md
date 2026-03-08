@@ -19,7 +19,7 @@ Use lowercase, hyphen-separated filenames. Supported formats: `.jpg`, `.jpeg`, `
 | Color | Filename |
 |-------|----------|
 | Designer White | `shaker/designer-white-1.jpg` … `shaker/designer-white-5.jpg` |
-| Designer White, Slab | `shaker/designer-white-slab-1.jpg`, `shaker/designer-white-slab-2.jpeg` |
+| Designer White, Slab | `shaker/designer-white-slab-1.jpg`, `shaker/designer-white-slab-2.jpg` |
 | Sand | `shaker/sand.jpg` |
 | Espresso | `shaker/espresso.jpg` |
 | Kodiak | `shaker/kodiak.jpg` |
