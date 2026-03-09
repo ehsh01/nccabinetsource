@@ -1,5 +1,4 @@
 import { Crown, Heart, Lightbulb, Ruler, Users, Zap } from "lucide-react";
-import foundersImg from "@assets/Generated_Image_December_21,_2025_-_7_09PM_1766375055633.jpg";
 
 const features = [
   {
@@ -39,17 +38,8 @@ export function About() {
     <section id="about" className="py-24 bg-slate-50">
       <div className="container mx-auto px-4">
         {/* Our Story Section */}
-        <div className="flex flex-col lg:flex-row items-center gap-12 mb-24">
-          <div className="w-full lg:w-1/2">
-            <div className="relative rounded-2xl overflow-hidden shadow-xl">
-              <img 
-                src={foundersImg} 
-                alt="Daymi and Paulo - Founders of NC Cabinet Source" 
-                className="w-full h-auto object-cover"
-              />
-            </div>
-          </div>
-          <div className="w-full lg:w-1/2 space-y-6">
+        <div className="max-w-3xl mx-auto mb-24">
+          <div className="space-y-6">
             <span className="text-primary font-bold tracking-wider uppercase text-sm block">About Us</span>
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-gray-900">Our Story</h2>
             <div className="space-y-4 text-gray-600 leading-relaxed">
