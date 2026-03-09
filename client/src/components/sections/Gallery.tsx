@@ -11,10 +11,6 @@ import img6 from "@assets/cabinet-design-consultation_1765688562348.jpg";
 import img7 from "@assets/cabinet-installation-in-progress-2_1765688562348.jpg";
 import img8 from "@assets/white-shaker-kitchen-cabinets_1765688562349.png";
 import img9 from "@assets/custom-kitchen-cabinets-north-carolina._1765688562349.jpg";
-import img10 from "@assets/Espresso-1.jpg";
-import img11 from "@assets/Kodiak-1.jpg";
-import img12 from "@assets/Moss-1.jpg";
-import img13 from "@assets/modern-gray-1.jpg";
 
 const galleryImages = [
   { src: img1, alt: "Custom Cabinetry Dark Wood" },
@@ -26,10 +22,10 @@ const galleryImages = [
   { src: img7, alt: "Cabinet Installation In Progress" },
   { src: img8, alt: "White Shaker Kitchen Cabinets Detail" },
   { src: img9, alt: "Custom Kitchen Cabinets North Carolina" },
-  { src: img10, alt: "Shaker Espresso Finish" },
-  { src: img11, alt: "Shaker Kodiak Finish" },
-  { src: img12, alt: "Shaker Moss Finish" },
-  { src: img13, alt: "Brooklyn Modern Gray Finish" },
+  { src: "/catalog/shaker/Espresso-1.jpg", alt: "Shaker Espresso Finish" },
+  { src: "/catalog/shaker/Kodiak-1.jpg", alt: "Shaker Kodiak Finish" },
+  { src: "/catalog/shaker/Moss-1.jpg", alt: "Shaker Moss Finish" },
+  { src: "/catalog/brooklyn/modern-gray-1.jpg", alt: "Brooklyn Modern Gray Finish" },
 ];
 
 export function Gallery() {
