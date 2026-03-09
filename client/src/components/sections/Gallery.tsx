@@ -22,10 +22,6 @@ const galleryImages = [
   { src: img7, alt: "Cabinet Installation In Progress" },
   { src: img8, alt: "White Shaker Kitchen Cabinets Detail" },
   { src: img9, alt: "Custom Kitchen Cabinets North Carolina" },
-  { src: "/catalog/shaker/Espresso-1.jpg?v=5", alt: "Shaker Espresso Finish" },
-  { src: "/catalog/shaker/Kodiak-1.jpg?v=5", alt: "Shaker Kodiak Finish" },
-  { src: "/catalog/shaker/Moss-1.jpg?v=5", alt: "Shaker Moss Finish" },
-  { src: "/catalog/brooklyn/modern-gray-1.jpg?v=5", alt: "Brooklyn Modern Gray Finish" },
 ];
 
 export function Gallery() {
