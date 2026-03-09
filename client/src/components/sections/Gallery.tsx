@@ -8,7 +8,7 @@ import img3 from "@assets/modern-custom-cabinetry-home_1765688562348.jpg";
 import img4 from "@assets/white-shaker-kitchen-cabinets-nc_1765688562348.jpg";
 import img5 from "@assets/modern-kitchen-cabinets-wood-finish_1765688562348.jpg";
 import img6 from "@assets/cabinet-design-consultation_1765688562348.jpg";
-import img7 from "@assets/cabinet-installation-in-progress-2_1765688562348.jpg";
+import img7 from "@assets/Cabinet-1.jpg";
 import img8 from "@assets/white-shaker-kitchen-cabinets_1765688562349.png";
 import img9 from "@assets/custom-kitchen-cabinets-north-carolina._1765688562349.jpg";
 
