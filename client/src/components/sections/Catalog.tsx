@@ -70,9 +70,9 @@ const collections: Collection[] = [
       { id: "designer-white", name: "Designer White", color: "#F5F5F5", imagePaths: ["shaker/designer-white-1.jpg", "shaker/designer-white-2.jpg", "shaker/designer-white-3.jpg", "shaker/designer-white-4.jpg", "shaker/designer-white-5.jpg"] },
       { id: "designer-white-slab", name: "Designer White, Slab", color: "#FAFAFA", imagePaths: ["shaker/designer-white-slab-1.jpg", "shaker/designer-white-slab-2.jpg"] },
       { id: "sand", name: "Sand", color: "#C4B896", imagePaths: ["shaker/sand-1.jpg", "shaker/sand-2.jpg", "shaker/sand-3.jpg"] },
-      { id: "espresso", name: "Espresso", color: "#3d2817", imagePaths: ["shaker/espresso.jpg"] },
-      { id: "kodiak", name: "Kodiak", color: "#5c4033", imagePaths: ["shaker/kodiak.jpg"] },
-      { id: "moss", name: "Moss", color: "#5a6b4a", imagePaths: ["shaker/moss.jpg"] },
+      { id: "espresso", name: "Espresso", color: "#3d2817", imagePaths: ["shaker/Espresso-1.jpg", "shaker/Espresso-2.jpg", "shaker/Espresso-3.jpg"] },
+      { id: "kodiak", name: "Kodiak", color: "#5c4033", imagePaths: ["shaker/Kodiak-1.jpg", "shaker/Kodiak-2.jpg", "shaker/Kodiak-3.jpg", "shaker/Kodiak-4.jpg", "shaker/Kodiak-5.jpg"] },
+      { id: "moss", name: "Moss", color: "#5a6b4a", imagePaths: ["shaker/Moss-1.jpg", "shaker/Moss-2.jpg", "shaker/Moss-3.jpg"] },
     ],
   },
   {

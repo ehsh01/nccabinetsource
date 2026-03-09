@@ -21,9 +21,9 @@ Use lowercase, hyphen-separated filenames. Supported formats: `.jpg`, `.jpeg`, `
 | Designer White | `shaker/designer-white-1.jpg` … `shaker/designer-white-5.jpg` |
 | Designer White, Slab | `shaker/designer-white-slab-1.jpg`, `shaker/designer-white-slab-2.jpg` |
 | Sand | `shaker/sand-1.jpg`, `shaker/sand-2.jpg`, `shaker/sand-3.jpg` |
-| Espresso | `shaker/espresso.jpg` |
-| Kodiak | `shaker/kodiak.jpg` |
-| Moss | `shaker/moss.jpg` |
+| Espresso | `shaker/Espresso-1.jpg`, `shaker/Espresso-2.jpg`, `shaker/Espresso-3.jpg` |
+| Kodiak | `shaker/Kodiak-1.jpg` … `shaker/Kodiak-5.jpg` |
+| Moss | `shaker/Moss-1.jpg`, `shaker/Moss-2.jpg`, `shaker/Moss-3.jpg` |
 
 ### Oslo Series
 | Color | Filenames (use multiple for collage) |
