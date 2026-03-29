@@ -2,13 +2,13 @@ import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
-import img1 from "@assets/nc-cabinet-source-custom-cabinetry_1765688562341.jpg";
+import img1 from "@assets/nc-cabinet-source-custom-cabinetry_1765688517382.jpg";
 import img2 from "@assets/custom-cabinet-workshop-nc_1765688562348.jpg";
 import img3 from "@assets/modern-custom-cabinetry-home_1765688562348.jpg";
 import img4 from "@assets/white-shaker-kitchen-cabinets-nc_1765688562348.jpg";
 import img5 from "@assets/modern-kitchen-cabinets-wood-finish_1765688562348.jpg";
 import img6 from "@assets/cabinet-design-consultation_1765688562348.jpg";
-import img7 from "@assets/cabinet-installation-in-progress-2_1765688562348.jpg";
+import img7 from "@assets/Cabinet-1.jpg";
 import img8 from "@assets/white-shaker-kitchen-cabinets_1765688562349.png";
 import img9 from "@assets/custom-kitchen-cabinets-north-carolina._1765688562349.jpg";
 

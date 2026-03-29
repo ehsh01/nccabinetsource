@@ -108,6 +108,24 @@
   }
 }
 
+/* Scroll targets: offset for fixed navbar so sections aren't hidden */
+[id="kitchens"],
+[id="bathrooms"],
+[id="outdoors"],
+[id="catalog"],
+[id="gallery"],
+[id="about"],
+[id="testimonials"],
+[id="contact"] {
+  scroll-margin-top: 6rem;
+}
+
+/* Catalog lightbox: override Tailwind preflight max-width so images display at full 1800×1013 */
+.catalog-lightbox-img {
+  max-width: none !important;
+  max-height: none !important;
+}
+
 /* Custom Utilities for Modern Feel */
 .glass-panel {
   @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-lg;

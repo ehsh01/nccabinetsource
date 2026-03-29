@@ -50,21 +50,23 @@ export function Navbar() {
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <button
+            <a
               key={link.name}
-              onClick={() => {
+              href={link.href}
+              onClick={(e) => {
+                e.preventDefault();
                 const element = document.querySelector(link.href);
                 if (element) {
                   element.scrollIntoView({ behavior: 'smooth' });
                 }
               }}
               className={cn(
-                "text-sm font-medium uppercase tracking-wide hover:text-primary transition-colors cursor-pointer bg-transparent border-none p-0",
+                "text-sm font-medium uppercase tracking-wide hover:text-primary transition-colors cursor-pointer",
                 "text-white/90 hover:text-white"
               )}
             >
               {link.name}
-            </button>
+            </a>
           ))}
         </div>
 
@@ -96,19 +98,21 @@ export function Navbar() {
         <div className="absolute top-full left-0 right-0 bg-slate-900 border-t border-slate-800 p-4 md:hidden shadow-xl animate-in slide-in-from-top-5">
           <div className="flex flex-col gap-4">
             {navLinks.map((link) => (
-              <button
+              <a
                 key={link.name}
-                onClick={() => {
+                href={link.href}
+                onClick={(e) => {
+                  e.preventDefault();
                   setIsMobileMenuOpen(false);
                   const element = document.querySelector(link.href);
                   if (element) {
                     element.scrollIntoView({ behavior: 'smooth' });
                   }
                 }}
-                className="text-lg font-medium text-white/90 py-2 border-b border-slate-800 hover:text-primary text-left bg-transparent"
+                className="text-lg font-medium text-white/90 py-2 border-b border-slate-800 hover:text-primary text-left block"
               >
                 {link.name}
-              </button>
+              </a>
             ))}
             <Button 
               className="w-full mt-4"
