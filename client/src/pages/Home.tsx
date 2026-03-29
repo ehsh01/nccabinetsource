@@ -22,7 +22,7 @@ export default function Home() {
         <Navbar />
         <Hero />
         <Services />
-        <ProductCatalog />
+        <Catalog />
         <Gallery />
         <About />
         <Testimonials />

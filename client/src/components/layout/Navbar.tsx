@@ -21,7 +21,7 @@ export function Navbar() {
     { name: "Kitchens", href: "#kitchens" },
     { name: "Bathrooms", href: "#bathrooms" },
     { name: "Outdoors", href: "#outdoors" },
-    { name: "Collections", href: "#collections" },
+    { name: "Catalog", href: "#catalog" },
     { name: "Gallery", href: "#gallery" },
     { name: "About", href: "#about" },
     { name: "Testimonials", href: "#testimonials" },
