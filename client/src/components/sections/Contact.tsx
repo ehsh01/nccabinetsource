@@ -76,6 +76,7 @@ export function Contact() {
             from_name: values.name,
             name: values.name,
             email: values.email,
+            replyto: values.email,
             phone: values.phone,
             message: values.message,
           }),
