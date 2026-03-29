@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -8,6 +9,30 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { MapPin, Phone } from "lucide-react";
 
+const WEB3FORMS_URL = "https://api.web3forms.com/submit";
+const SUPPORT_EMAIL = "support@nccabinetsource.com";
+/** ~2k URL cap for mailto: on common mail clients */
+const MAILTO_MAX_LEN = 1850;
+
+function openMailtoComposer(values: z.infer<typeof formSchema>) {
+  const subject = encodeURIComponent(`Website inquiry from ${values.name}`);
+  const prefix = `mailto:${SUPPORT_EMAIL}?subject=${subject}&body=`;
+  let body =
+    `Name: ${values.name}\nEmail: ${values.email}\nPhone: ${values.phone}\n\n${values.message}\n\n---\nSent via nccabinetsource.com contact form`;
+  let encoded = encodeURIComponent(body);
+  while (encoded.length > MAILTO_MAX_LEN - prefix.length && body.length > 80) {
+    body = `${body.slice(0, Math.floor(body.length * 0.85)).trim()}\n…(message truncated)`;
+    encoded = encodeURIComponent(body);
+  }
+  const href = prefix + encoded;
+  const a = document.createElement("a");
+  a.href = href;
+  a.rel = "noopener noreferrer";
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+}
+
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
   email: z.string().email("Invalid email address"),
@@ -17,6 +42,7 @@ const formSchema = z.object({
 
 export function Contact() {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -27,13 +53,60 @@ export function Contact() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
-    toast({
-      title: "Message Sent!",
-      description: "We'll get back to you shortly regarding your project.",
-    });
-    form.reset();
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY?.trim();
+
+    const finishWithMailto = (title: string, description: string) => {
+      openMailtoComposer(values);
+      toast({ title, description });
+    };
+
+    if (accessKey) {
+      setIsSubmitting(true);
+      try {
+        const res = await fetch(WEB3FORMS_URL, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            access_key: accessKey,
+            subject: "NC Cabinet Source — Website contact form",
+            from_name: values.name,
+            name: values.name,
+            email: values.email,
+            phone: values.phone,
+            message: values.message,
+          }),
+        });
+
+        const data = (await res.json()) as { success?: boolean; message?: string };
+
+        if (res.ok && data.success) {
+          toast({
+            title: "Message sent",
+            description: "We'll get back to you shortly regarding your project.",
+          });
+          form.reset();
+          return;
+        }
+        throw new Error(data.message || "Something went wrong");
+      } catch {
+        finishWithMailto(
+          "Opening your email app",
+          `We couldn't send in the background. A draft to ${SUPPORT_EMAIL} should open — tap Send when it looks right.`,
+        );
+      } finally {
+        setIsSubmitting(false);
+      }
+      return;
+    }
+
+    finishWithMailto(
+      "Open your email app",
+      `A draft message to ${SUPPORT_EMAIL} should open. Tap Send to deliver your inquiry.`,
+    );
   }
 
   return (
@@ -128,9 +201,18 @@ export function Contact() {
                   </FormItem>
                 )}
               />
-              <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-white font-bold py-6 text-lg rounded-lg transition-all transform hover:scale-[1.01]">
-                Send Message
+              <Button
+                type="submit"
+                disabled={isSubmitting}
+                className="w-full bg-primary hover:bg-primary/90 text-white font-bold py-6 text-lg rounded-lg transition-all transform hover:scale-[1.01] disabled:opacity-70 disabled:transform-none"
+              >
+                {isSubmitting ? "Sending…" : "Send Message"}
               </Button>
+              {!import.meta.env.VITE_WEB3FORMS_ACCESS_KEY?.trim() && (
+                <p className="text-center text-sm text-gray-500">
+                  This opens your email app with a message to {SUPPORT_EMAIL}. If nothing opens, email us directly.
+                </p>
+              )}
             </form>
           </Form>
         </div>
